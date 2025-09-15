@@ -18,6 +18,12 @@ while True:                # forever
   elif data["OP"] == "sub":
     res = data["V1"] - data["V2"]
     status = "OK"
+  elif data["OP"] == "multiply":
+    res = data["V1"] * data["V2"]
+    status = "OK"
+  elif data["OP"] == "divide":
+    res = data["V1"] / data["V2"]
+    status = "OK"    
   else:
     status = "NOK"
     res = 1
@@ -26,3 +32,4 @@ while True:                # forever
   conn.send(msg)
   
 conn.close()               # close the connection
+
